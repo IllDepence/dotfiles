@@ -1,0 +1,12 @@
+USAGE:
+
+Add files:
+    $ ./addfile.sh </abs/path/to/file> <identifier>
+
+Run makelinks script:
+    $ ./makelinks.sh
+
+
+PLEASE NOTE:
+
+After listing files and asking whether to continue or not ONCE, the makelinks script WILL REMOVE ALL EXISTING FILES in its way without prompting the user again.

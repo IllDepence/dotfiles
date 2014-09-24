@@ -1,0 +1,8 @@
+#!/bin/sh
+export GTK_IM_MODULE='uim'
+export QT_IM_MODULE='uim'
+uim-xim --engine=anthy-utf8 &
+export XMODIFIERS='@im=uim'
+xmodmap ~/.Xmodmap
+
+/usr/bin/zsh -c '( cd /mnt/sda2/home/tarek/eigenedaten/wiki/zenbu; /home/tarek/.cabal/bin/gitit -f zenbu.conf &! )'

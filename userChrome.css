@@ -1,0 +1,40 @@
+/* Squeeze Bookmarks */
+#personal-bookmarks toolbarbutton {
+margin: -5px !important;
+}
+#personal-bookmarks {
+margin: -8px 0px -8px 0px !important;
+}
+
+/* Remove the Bookmark Star */
+#star-button {
+display: none !important;
+}
+
+#status-bar
+{
+margin: -5px 0px -5px 0px !important;
+}
+
+.toolbarbutton-1, .toolbarbutton-menubutton-button {
+margin: -7px !important;
+}
+
+/*
+
+* Remove extra padding from the Navigation Bar and other toolbars*
+   .toolbarbutton-1, .toolbarbutton-menubutton-button {
+      padding: 2px 3px !important;
+   }
+   .toolbarbutton-1[checked="true"], .toolbarbutton-1[open="true"],
+   .toolbarbutton-menubutton-button[checked="true"],
+   .toolbarbutton-menubutton-button[open="true"] {
+      padding: 4px 1px 1px 4px !important;
+   }
+   * Remove extra padding from the Status Bar,
+      introduced by the Toolbar enhancements extension *
+   #tbx-bottom-toolbox {
+      border-top-width: 0 !important;
+   }
+
+*/

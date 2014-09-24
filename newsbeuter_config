@@ -1,0 +1,51 @@
+browser "firefox %u"
+auto-reload yes
+reload-time 15
+show-keymap-hint no
+color info white blue
+color listfocus white color239 bold
+color listnormal_unread green color239
+color listfocus_unread green color239 bold
+
+# vim like navigation
+bind-key J next-feed articlelist
+bind-key K prev-feed articlelist
+bind-key j next
+bind-key k prev
+bind-key l open
+bind-key l open-in-browser-and-mark-read articlelist
+bind-key L open articlelist
+bind-key r toggle-article-read
+bind-key h quit
+
+unbind-key ENTER
+unbind-key s
+unbind-key n
+unbind-key p
+unbind-key 
+unbind-key o
+unbind-key O
+unbind-key 
+unbind-key N
+unbind-key u
+unbind-key 
+unbind-key t
+unbind-key E
+unbind-key f
+unbind-key 
+unbind-key 
+unbind-key 
+unbind-key 
+unbind-key 
+unbind-key D
+unbind-key $
+unbind-key v
+unbind-key 
+unbind-key 
+unbind-key 
+unbind-key g
+unbind-key G
+unbind-key UP
+unbind-key DOWN
+unbind-key PPAGE
+unbind-key NPAGE

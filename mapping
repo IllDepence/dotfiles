@@ -1,0 +1,13 @@
+zshrc;/home/tarek/.zshrc
+XCompose;/home/tarek/.XCompose
+Xdefaults;/home/tarek/.Xdefaults
+vimrc;/home/tarek/.vimrc
+Xmodmap;/home/tarek/.Xmodmap
+Xsession_custom;/etc/X11/Xsession.d/99custom
+userChrome.css;/home/tarek/.mozilla/firefox/k665os81.default/chrome/userChrome.css
+ranger_rc.conf;/home/tarek/.config/ranger/rc.conf
+ranger_rifle.conf;/home/tarek/.config/ranger/rifle.conf
+i3_config;/home/tarek/.i3/config
+i3status.conf;/home/tarek/.i3/i3status.conf
+newsbeuter_config;/home/tarek/.newsbeuter/config
+newsbeuter_urls;/home/tarek/.newsbeuter/urls
