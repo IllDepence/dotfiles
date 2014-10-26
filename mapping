@@ -11,3 +11,4 @@ i3_config;/home/tarek/.i3/config
 i3status.conf;/home/tarek/.i3/i3status.conf
 newsbeuter_config;/home/tarek/.newsbeuter/config
 newsbeuter_urls;/home/tarek/.newsbeuter/urls
+ncmpcpp_config;/home/tarek/.ncmpcpp/config

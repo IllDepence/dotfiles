@@ -1,0 +1,40 @@
+# mpd
+mpd_host = "127.0.0.1"
+mpd_port = "6600"
+mpd_music_dir = "/home/tarek/eigenedaten/audio"
+
+# format
+song_list_format = "{%a - }{%t}|{$8%f$8}$R{$8(%l)$8}"
+song_columns_list_format = "(7f)[white]{l} (25)[white]{a} (40)[]{t|f} (30)[white]{b}"
+song_status_format = "{{%a{ \"%b\"{ (%y)}} - }{%t}}|{%f}"
+song_library_format = "{%n - }{%t}|{%f}"
+tag_editor_album_format = "{(%y) }%b"
+
+progressbar_look ="━━─"
+
+# color
+colors_enabled = "yes"
+
+active_column_color             = "white"
+active_window_border            = "white"
+alternative_ui_separator_color  = "white"
+color1                          = "white"
+color2                          = "white"
+empty_tag_color                 = "white"
+header_window_color             = "white"
+main_window_color               = "white"
+main_window_highlight_color     = "white"
+progressbar_color               = "cyan"
+statusbar_color                 = "white"
+state_line_color                = "cyan"
+state_flags_color               = "white"
+volume_color                    = "white"
+visualizer_color                = "white"
+window_border_color             = "white"
+
+# misc
+external_editor     = "vim"
+use_console_editor  = "yes"
+allow_physical_files_deletion = "no"
+allow_physical_directories_deletion = "no"
+autocenter_mode = "yes"
