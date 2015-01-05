@@ -12,3 +12,4 @@ i3status.conf;/home/tarek/.i3/i3status.conf
 newsbeuter_config;/home/tarek/.newsbeuter/config
 newsbeuter_urls;/home/tarek/.newsbeuter/urls
 ncmpcpp_config;/home/tarek/.ncmpcpp/config
+wiki_custom_css;/home/tarek/eigenedaten/wiki/zenbu/static/css/custom.css

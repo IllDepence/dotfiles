@@ -1,0 +1,15 @@
+@import url("screen.css"); /* default gitit screen styles */
+@import url("hk-pyg.css"); /* for syntax highlighting */
+
+/* Put your custom style modifications here: */
+
+table {
+    border-collapse: collapse;
+}
+table, th, td {
+    border: 1px solid black;
+}
+ul ul {
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
