@@ -21,6 +21,7 @@
 <Multi_key> <less> <3> : "♥" U2665
 # - misc
 <Multi_key> <z> <w> : "‌" U200C
+<Multi_key> <z> <s> : "​" U200B
 
 # German
 # - ligatures
@@ -34,6 +35,15 @@
 <Multi_key> <apostrophe> <U> : "Ü" U00DC
 
 # Japanese
+# - Hepburn
+<Multi_key> <asciicircum> <asciicircum> : "̄" U0304
+<Multi_key> <asciicircum> <A> : "Ā" U0100
+<Multi_key> <asciicircum> <a> : "ā" U0101
+<Multi_key> <asciicircum> <U> : "Ū" U016A
+<Multi_key> <asciicircum> <u> : "ū" U016B
+<Multi_key> <asciicircum> <O> : "Ō" U014C
+<Multi_key> <asciicircum> <o> : "ō" U014D
+<Multi_key> <underscore> <underscore> : "̱" U0331
 # - punctuation
 Lock <space> : "　" U3000
 Lock <comma> : "、" U3001
