@@ -8,4 +8,6 @@ export XMODIFIERS='@im=uim'
 export PATH=$PATH:$HOME/.scripts
 export PATH=$PATH:$HOME/.scripts/3rd_party
 
+eval "$(gpg-agent --daemon)"
+
 /usr/bin/zsh -c '( cd /mnt/sda2/home/tarek/eigenedaten/wiki/zenbu; /home/tarek/.cabal/bin/gitit -f zenbu.conf &! )'
