@@ -15,3 +15,4 @@ ncmpcpp_config;/home/tarek/.ncmpcpp/config
 wiki_custom_css;/home/tarek/eigenedaten/wiki/zenbu/static/css/custom.css
 user-dirs.dirs;/home/tarek/.config/user-dirs.dirs
 mpdconf;/home/tarek/.mpdconf
+ncmpcpp_bindings;/home/tarek/.ncmpcpp/bindings

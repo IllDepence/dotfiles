@@ -8,7 +8,7 @@ song_list_format = "{%a - }{%t}|{$8%f$8}$R{$8(%l)$8}"
 song_columns_list_format = "(7f)[white]{l} (25)[white]{a} (40)[]{t|f} (30)[white]{b}"
 song_status_format = "{{%a{ \"%b\"{ (%y)}} - }{%t}}|{%f}"
 song_library_format = "{%n - }{%t}|{%f}"
-tag_editor_album_format = "{(%y) }%b"
+#tag_editor_album_format = "{(%y) }%b"
 
 progressbar_look ="━━─"
 
@@ -35,6 +35,6 @@ window_border_color             = "white"
 # misc
 external_editor     = "vim"
 use_console_editor  = "yes"
-allow_physical_files_deletion = "no"
-allow_physical_directories_deletion = "no"
+#allow_physical_files_deletion = "no"
+#allow_physical_directories_deletion = "no"
 autocenter_mode = "yes"

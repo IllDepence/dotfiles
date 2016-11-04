@@ -5,6 +5,11 @@ uim-xim --engine=anthy-utf8 &
 export XMODIFIERS='@im=uim'
 #xmodmap ~/.Xmodmap             # somehow works on its own now
 
+# make unity-control-center work on i3
+if [ $XDG_CURRENT_DESKTOP="i3" ]; then
+  XDG_CURRENT_DESKTOP="Unity"
+fi
+
 export PATH=$PATH:$HOME/.scripts
 export PATH=$PATH:$HOME/.scripts/3rd_party
 
