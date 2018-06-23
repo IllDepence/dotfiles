@@ -159,16 +159,24 @@ input {
 #
 # An example of an ALSA output:
 #
-audio_output {
-	type		"alsa"
-	name		"My ALSA Device"
-    mixer_type  "software"
+# audio_output {
+# 	type		"alsa"
+# 	name		"My ALSA Device"
+#     mixer_type  "software"
 #	device		"hw:0,0"	# optional
 #	mixer_type      "hardware"      # optional
 #	mixer_device	"default"	# optional
 #	mixer_control	"PCM"		# optional
 #	mixer_index	"0"		# optional
+# }
+
+audio_output {
+        type    "pulse"
+        name    "MPD PulseAudio Output"
+        #server  "localhost"   # optional
+        #sink    "alsa_output" # optional
 }
+
 #
 # An example of an OSS output:
 #

@@ -34,4 +34,4 @@ mvcd() {
     }
 
 export LS_COLORS='di=1:fi=00:ex=96'
-export PATH=$PATH:/home/tarek/.scripts:/home/tarek/.scripts/3rd_party:/home/tarek/.cabal/bin:
+export PATH=$PATH:/home/tarek/.scripts:/home/tarek/.scripts/3rd_party:/home/tarek/.cabal/bin:/usr/lib/chromium-browser:/usr/local/cuda-8.0/bin:/home/tarek/.local/bin:

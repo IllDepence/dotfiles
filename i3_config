@@ -178,4 +178,4 @@ client.urgent               $bf #900000 #ffffff #900000 #cee318
 
 # moar
 bindsym $mod+Shift+w exec "/home/tarek/.scripts/setbg.sh"
-bindsym $mod+Shift+Delete exec "slock"
+bindsym $mod+Shift+equal exec "slock"

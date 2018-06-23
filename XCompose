@@ -22,17 +22,21 @@
 # - misc
 <Multi_key> <z> <w> : "‌" U200C
 <Multi_key> <z> <s> : "​" U200B
+<Multi_key> <s> <h> : "­"U00AD
 
 # German
 # - ligatures
 <Multi_key> <s> <z> : "ß" U00DF
 # - umlauts
-<Multi_key> <apostrophe> <a> : "ä" U00E4
-<Multi_key> <apostrophe> <o> : "ö" U00F6
-<Multi_key> <apostrophe> <u> : "ü" U00FC
-<Multi_key> <apostrophe> <A> : "Ä" U00C4
-<Multi_key> <apostrophe> <O> : "Ö" U00D6
-<Multi_key> <apostrophe> <U> : "Ü" U00DC
+<Multi_key> <a> <e> : "ä" U00E4
+<Multi_key> <o> <e> : "ö" U00F6
+<Multi_key> <u> <e> : "ü" U00FC
+<Multi_key> <A> <E> : "Ä" U00C4
+<Multi_key> <A> <e> : "Ä" U00C4
+<Multi_key> <O> <E> : "Ö" U00D6
+<Multi_key> <O> <e> : "Ö" U00D6
+<Multi_key> <U> <E> : "Ü" U00DC
+<Multi_key> <U> <e> : "Ü" U00DC
 
 # Japanese
 # - Hepburn
@@ -41,6 +45,8 @@
 <Multi_key> <asciicircum> <a> : "ā" U0101
 <Multi_key> <asciicircum> <U> : "Ū" U016A
 <Multi_key> <asciicircum> <u> : "ū" U016B
+<Multi_key> <asciicircum> <E> : "Ē" U0112
+<Multi_key> <asciicircum> <e> : "ē" U0113
 <Multi_key> <asciicircum> <O> : "Ō" U014C
 <Multi_key> <asciicircum> <o> : "ō" U014D
 <Multi_key> <underscore> <underscore> : "̱" U0331
