@@ -1,9 +1,9 @@
 # Lines configured by zsh-newuser-install
 HISTFILE=~/.histfile
-HISTSIZE=10000
-SAVEHIST=10000
-setopt appendhistory extendedglob notify
-unsetopt autocd beep nomatch
+HISTSIZE=100000
+SAVEHIST=100000
+setopt appendhistory extendedglob
+unsetopt autocd beep
 bindkey -v
 # End of lines configured by zsh-newuser-install
 # The following lines were added by compinstall
@@ -15,23 +15,14 @@ compinit
 
 PROMPT="[%n@%m %1~]$ "
 
+alias ls='ls --color=auto'
+alias df='df -h'
+alias unzip-jp='UNZIP="-O cp932" unzip -x '
+alias weechat='weechat-curses'
+
+export LS_COLORS='di=1:fi=00:ex=96'
+
 bindkey '\e[3~' delete-char
 bindkey '^[Od' backward-word  # control-left
 bindkey '^[Oc' forward-word   # control-right
 bindkey '^R' history-incremental-search-backward
-
-alias ls='ls --color=auto'
-alias df='df -h'
-alias fucking='sudo'
-alias chromium='chromium --enable-webgl --ignore-gpu-blacklist'
-alias unzip-jp='UNZIP="-O cp932" unzip -x '
-alias nano='vim'
-alias edit='vim'
-alias emacs='vim'
-alias weechat='weechat-curses'
-mvcd() {
-    mv $1 $2;cd $2
-    }
-
-export LS_COLORS='di=1:fi=00:ex=96'
-export PATH=$PATH:/home/tarek/.scripts:/home/tarek/.scripts/3rd_party:/home/tarek/.cabal/bin:/usr/lib/chromium-browser:/usr/local/cuda-8.0/bin:/home/tarek/.local/bin:

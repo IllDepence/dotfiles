@@ -7,15 +7,18 @@
 
 # i3 config file (v4)
 #
-# Please see http://i3wm.org/docs/userguide.html for a complete reference!
+# Please see https://i3wm.org/docs/userguide.html for a complete reference!
 
 set $mod Mod4
 
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
+font pango:monospace 8
+
 # This font is widely installed, provides lots of unicode glyphs, right-to-left
 # text rendering and scalability on retina/hidpi displays (thanks to pango).
-font pango:DejaVu Sans Mono 8
+#font pango:DejaVu Sans Mono 8
+
 # Before i3 v4.8, we used to recommend this one as the default:
 # font -misc-fixed-medium-r-normal--13-120-75-75-C-70-iso10646-1
 # The font above is very space-efficient, that is, it looks good, sharp and
@@ -27,7 +30,7 @@ font pango:DejaVu Sans Mono 8
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+Return exec "XMODIFIERS='@im=' urxvtcd"
+bindsym $mod+Return exec i3-sensible-terminal
 
 # kill focused window
 bindsym $mod+x kill
@@ -70,7 +73,7 @@ bindsym $mod+g split h
 bindsym $mod+v split v
 
 # enter fullscreen mode for the focused container
-bindsym $mod+f fullscreen
+bindsym $mod+f fullscreen toggle
 
 # change container layout (stacked, tabbed, toggle split)
 bindsym $mod+s layout stacking
@@ -118,7 +121,7 @@ bindsym $mod+Shift+c reload
 # restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
 bindsym $mod+q restart
 # exit i3 (logs you out of your X session)
-bindsym $mod+Shift+q exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -b 'Yes, exit i3' 'i3-msg exit'"
+bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -b 'Yes, exit i3' 'i3-msg exit'"
 
 # resize window (you can also use the mouse for that)
 mode "resize" {
@@ -134,14 +137,14 @@ mode "resize" {
         bindsym $mod+l resize grow width 5 px or 5 ppt
 
         # same bindings, but for the arrow keys
-        bindsym Left resize shrink width 5 px or 5 ppt
-        bindsym Down resize grow height 5 px or 5 ppt
-        bindsym Up resize shrink height 5 px or 5 ppt
-        bindsym Right resize grow width 5 px or 5 ppt
+        bindsym Left resize shrink width 10 px or 10 ppt
+        bindsym Down resize grow height 10 px or 10 ppt
+        bindsym Up resize shrink height 10 px or 10 ppt
+        bindsym Right resize grow width 10 px or 10 ppt
 
         # back to normal: Enter or Escape
         bindsym Return mode "default"
-        bindsym Caps_Lock mode "default"
+        bindsym Escape mode "default"
 }
 
 bindsym $mod+Shift+r mode "resize"
@@ -152,20 +155,21 @@ set $wh #ffffff
 
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
-bar {
-        status_command "/home/tarek/.scripts/custom_i3status.sh"
-        mode invisible
-        position bottom
-        tray_output none
-        colors {
-            focused_workspace  $bu $bf
-            active_workspace   $bu $bf
-            inactive_workspace $wh $bu
-            urgent_workspace   $bu $bf
-        }
-}
-bindsym $mod+b bar mode dock
-bindsym $mod+Shift+b bar mode invisible
+# bar {
+#         status_command i3status
+#         mode invisible
+#         position bottom
+#         tray_output primary
+#         colors {
+#             focused_workspace  $bu $bf
+#             active_workspace   $bu $bf
+#             inactive_workspace $wh $bu
+#             urgent_workspace   $bu $bf
+#         }
+# }
+# bindsym $mod+b bar mode dock
+# bindsym $mod+Shift+b bar mode invisible
+bar {} # including status_command makes the ibus tray icon go away
 
 # hide window title bars
 new_window 1pixel
@@ -176,6 +180,10 @@ client.unfocused            $bu #5f676a #ffffff #484e50 #888888
 client.focused_inactive     $bu #222222 #888888 #292d2e #888888
 client.urgent               $bf #900000 #ffffff #900000 #cee318
 
-# moar
-bindsym $mod+Shift+w exec "/home/tarek/.scripts/setbg.sh"
-bindsym $mod+Shift+equal exec "slock"
+# extra key bindings
+bindsym $mod+Shift+w exec setbg.sh
+bindsym $mod+Shift+equal exec slock
+
+# startup applications
+exec /usr/bin/zsh -c '( cd /home/tarek/data_personal/wiki/zenbu; gitit -f zenbu.conf &! )'
+exec setbg.sh
