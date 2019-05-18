@@ -1,10 +1,13 @@
 !look
+Xft.dpi: 96
+Xft.antialias: true
+Xft.rgba: rgb
+Xft.hinting: true
+Xft.hintstyle:  hintfull
 URxvt.background: #2d2d2d
 URxvt.foreground: #f0f0f0
 URxvt.scrollBar: false
-URxvt.font: fixed
-!dark blue
-!URxvt.color12: #0072ff
+URxvt.font: xft:Source Han Code JP:size=10
 
 !urls & font size
 URxvt.perl-ext: default,url-select,font-size
@@ -49,7 +52,7 @@ XLock.mode: blank
 *color5:        #833c9f
 *color13:       #be67e1
 
-! cyan 
+! cyan
 *color6:        #0ac1cd
 *color14:       #63e7f0
 

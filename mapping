@@ -4,3 +4,6 @@ vimrc;/home/tarek/.vimrc
 profile;/home/tarek/.profile
 i3_config;/home/tarek/.config/i3/config
 XCompose;/home/tarek/.XCompose
+Xdefaults;/home/tarek/.Xdefaults
+ranger_rc.conf;/home/tarek/.config/ranger/rc.conf
+ranger_rifle.conf;/home/tarek/.config/ranger/rifle.conf

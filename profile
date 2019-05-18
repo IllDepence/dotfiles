@@ -44,3 +44,4 @@ fi
 # XMODIFIERS=@im=
 
 ibus-daemon -drx
+redshift-gtk &!
