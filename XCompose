@@ -1,6 +1,28 @@
 # general
-# - punctuation
-<Multi_key> <minus> <minus> : "—" U2014
+# - dashes
+#   - systematic
+<Multi_key> <minus> <0> : "­" U00AD  # soft hyphen
+<Multi_key> <minus> <1> : "‐" U2010  # true hyphen
+<Multi_key> <minus> <2> : "–" U2013  # en dash
+<Multi_key> <minus> <3> : "—" U2014  # em dash
+<Multi_key> <minus> <numbersign> : "⸻" U2E3B  # TRIPPE EM DASH
+#   - by name
+<Multi_key> <s> <h> : "­" U00AD  # soft hyphen
+<Multi_key> <t> <h> : "‐" U2010  # true hyphen (overwrites þ)
+<Multi_key> <b> <i> <s>: "–" U2013  # en dash
+<Multi_key> <2> <m> : "⸺" U2E3A  # two em dash
+<Multi_key> <3> <m> : "⸻" U2E3B  # THREE EM DASH
+# - quotation marks
+#   - English
+<Multi_key> <grave> <grave> : "“" U201C
+<Multi_key> <apostrophe> <apostrophe> : "”" U201D
+<Multi_key> <1> <grave> : "‘" U2018
+<Multi_key> <1> <apostrophe> : "’" U2019
+#   - German
+<Multi_key> <g> <grave> <grave> : "„" U201E
+<Multi_key> <g> <apostrophe> <apostrophe> : "“" U201C
+<Multi_key> <1> <g> <grave> : "‚" U201A
+<Multi_key> <1> <g> <apostrophe> : "‘" U2018
 # - symbols
 <Multi_key> <exclam> <equal> : "≠" U2260
 <Multi_key> <E> : "∈" U2208
@@ -19,14 +41,18 @@
 <Multi_key> <x> <x> : "✗" U2717
 <Multi_key> <X> <X> : "✘" U2718
 <Multi_key> <less> <3> : "♥" U2665
-# - misc
+# - zero width
 <Multi_key> <z> <w> : "‌" U200C
 <Multi_key> <z> <s> : "​" U200B
-<Multi_key> <s> <h> : "­"U00AD
+<Multi_key> <z> <j> : "‍" U200D
+# - variation selectors
+<Multi_key> <t> <x> <t> : "︎" UFE0E
+<Multi_key> <i> <m> <g> : "️" UFE0F
 
 # German
 # - ligatures
 <Multi_key> <s> <z> : "ß" U00DF
+<Multi_key> <S> <z> : "ẞ" U1E9E
 # - umlauts
 <Multi_key> <a> <e> : "ä" U00E4
 <Multi_key> <o> <e> : "ö" U00F6
