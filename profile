@@ -37,7 +37,7 @@ if [ -d "$PATH:$HOME/.local/bin" ] ; then
     PATH="$PATH:$HOME/.local/bin"
 fi
 
-# v also copied into /etc/environment to apply system wide
+# v (currently not) copied into /etc/environment to apply system wide
 # (especially for stuff done as root)
 # GTK_IM_MODULE=
 # QT_IM_MODULE=
