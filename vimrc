@@ -1,4 +1,5 @@
 " basic settings - - - - - - - - - - - - - - - - -
+set nocompatible
 set encoding=utf-8
 set background=dark
 set expandtab
@@ -7,11 +8,13 @@ set shiftwidth=4
 set hlsearch
 exec "set listchars=tab:\u2050\u2050,trail:\uB7"
 set list
-set nu
+" set nu  " no nice copy pasting to other applications
+set mouse=r
 hi ColorColumn ctermbg=255
 hi LineNr ctermfg=darkgrey
 let python_highlight_all=1
 syntax on
+set backspace=indent,eol,start
 
 " file specific indentation - - - - - - - - - - -
 au BufNewFile,BufRead *.py
@@ -78,6 +81,8 @@ filetype indent off  " b/c vim-plug turns this on
 " " SimplyFold
 let g:SimpylFold_docstring_preview=1
 " " jedi-vim
+set noshowmode  " show call signatures in command line instead
+let g:jedi#show_call_signatures = '2'  " of within the buffer
 let g:jedi#auto_vim_configuration = 0
 let g:jedi#use_splits_not_buffers = 'bottom'
 let g:jedi#popup_on_dot = 0
@@ -104,6 +109,7 @@ vmap <C-_> gc  " weirdly C-_ means Ctrl+/
 " " ale
 packloadall
 silent! helptags ALL
+set signcolumn=yes
 let g:ale_linters = {
-      \   'python': ['flake8', 'pylint3'],
+      \   'python': ['flake8', 'pylint'],
       \}
