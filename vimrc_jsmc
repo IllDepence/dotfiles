@@ -87,28 +87,35 @@ nnoremap <space> za
 " vim-plug - - - - - - - - - - - - - - - - - - -
 " " add plugins
 call plug#begin('~/.vim/plugged')
-  Plug 'tmhedberg/SimpylFold'
+  " " pre LSP Python stuff
   " Plug 'vim-scripts/indentpython.vim'
   " Plug 'davidhalter/jedi-vim'
-  Plug 'ervandew/supertab'
+  " Plug 'ervandew/supertab'
   " Plug 'vim-syntastic/syntastic'
   " Plug 'nvie/vim-flake8'
-  Plug 'tpope/vim-commentary'
   " Plug 'dense-analysis/ale'
+
+  " " Copilot
   " Plug 'github/copilot.vim'
 
+  " General UI
   Plug 'nvim-lualine/lualine.nvim'
   Plug 'nvim-tree/nvim-web-devicons'
 
+  " Theme
   Plug 'sainnhe/sonokai'
 
+  " General coding plugins
+  Plug 'tmhedberg/SimpylFold'
   Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
+  Plug 'tpope/vim-commentary'
 
+  " Files/navigation
   Plug 'nvim-lua/plenary.nvim'
   Plug 'nvim-telescope/telescope.nvim', { 'tag': '0.1.6' }
-
   Plug 'nvim-tree/nvim-tree.lua'
 
+  " " LSP/TS
   " Plug 'neovim/nvim-lspconfig'
   " Plug 'pmizio/typescript-tools.nvim'
 
@@ -126,8 +133,22 @@ call plug#end()
 " " (b/c vim-plug turns this on)
 filetype indent off
 
+" always turn on sign column to prevent code from jiggling left/right
+" based on the (non)existence of warnings/errors
+set signcolumn=yes
+
 " SimplyFold - - - - - - - - - - - - - - - - - - -
 let g:SimpylFold_docstring_preview=1
+
+" vim-commentary - - - - - - - - - - - - - - - - -
+" " Space in visual mode to toogle comment
+vmap <Space> gc
+" " can't map Ctrl + / on MacOS
+" "   see: https://stackoverflow.com/a/64073945
+" " vim-commentary says to set
+" "   filetype plugin indent on
+" "   but does not seem to be necessary
+
 " " jedi-vim - - - - - - - - - - - - - - - - - - - -
 " " " hides mode indicator (e.g., --INSERT--)
 " set noshowmode
@@ -146,13 +167,9 @@ let g:SimpylFold_docstring_preview=1
 " nnoremap <C-D> :call jedi#goto()<CR>
 
 " supertab - - - - - - - - - - - - - - - - - - - -
-set omnifunc=syntaxcomplete#Complete
-let g:SuperTabDefaultCompletionType = "context"
-let g:SuperTabContextDefaultCompletionType = "<c-x><c-o>"
-
-" vim-commentary - - - - - - - - - - - - - - - - -
-" " Ctrl + / to toogle comment
-vmap <C-_> gc
+" set omnifunc=syntaxcomplete#Complete
+" let g:SuperTabDefaultCompletionType = "context"
+" let g:SuperTabContextDefaultCompletionType = "<c-x><c-o>"
 
 " " ale - - - - - - - - - - - - - - - - - - - - - -
 " " " load all packages
@@ -170,4 +187,4 @@ vmap <C-_> gc
 " " disable copilot
 " " (autocmd that executes for all new buffers / when
 " " opening a file of any kind)
-au BufNewFile,BufRead * let b:copilot_enabled = 0
+" au BufNewFile,BufRead * let b:copilot_enabled = 0
