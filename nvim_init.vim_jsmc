@@ -40,7 +40,16 @@ nnoremap fg <cmd>Telescope live_grep<cr>
 lua << END
 
 -- lualine
-require('lualine').setup()
+require('lualine').setup {
+  sections = {
+    lualine_a = {'mode'},
+    lualine_b = {'filename', 'diagnostics'},
+    lualine_c = {'branch', 'diff'},
+    lualine_x = {'encoding', 'fileformat', 'filetype'},
+    lualine_y = {'progress'},
+    lualine_z = {'location'}
+  }
+}
 
 -- nvim-tree
 require("nvim-tree").setup()
