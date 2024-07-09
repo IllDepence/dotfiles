@@ -47,7 +47,7 @@ au BufNewFile,BufRead *.py
     \| set expandtab
     \| set autoindent
     \| set fileformat=unix
-au BufNewFile,BufRead *.js,*.html,*.css
+au BufNewFile,BufRead *.js,*ts,*tsx,*.html,*.css,*.scss
     \ set tabstop=2
     \| set softtabstop=2
     \| set shiftwidth=2
@@ -109,6 +109,9 @@ call plug#begin('~/.vim/plugged')
   Plug 'tmhedberg/SimpylFold'
   Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
   Plug 'tpope/vim-commentary'
+  Plug 'prettier/vim-prettier', {
+    \ 'do': 'npm install --frozen-lockfile --production',
+    \ 'for': ['javascript', 'typescript', 'css', 'less', 'scss', 'json', 'graphql', 'markdown', 'vue', 'svelte', 'yaml', 'html'] }
 
   " Files/navigation
   Plug 'nvim-lua/plenary.nvim'

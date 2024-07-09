@@ -60,6 +60,14 @@ vim.api.nvim_set_keymap(
     { noremap = true, silent = true }
 )
 
+-- prettier
+vim.api.nvim_exec([[
+  augroup PrettierOnSave
+    autocmd!
+    autocmd BufWritePost *.js,*ts,*tsx,*.html,*.css,*.scss Prettier
+  augroup END
+]], false)
+
 -- treesitter
 require('nvim-treesitter.configs').setup {
   -- A list of parser names, or "all" (the five listed parsers should always be installed)
