@@ -111,7 +111,7 @@ call plug#begin('~/.vim/plugged')
   Plug 'tpope/vim-commentary'
   Plug 'prettier/vim-prettier', {
     \ 'do': 'npm install --frozen-lockfile --production',
-    \ 'for': ['javascript', 'typescript', 'css', 'less', 'scss', 'json', 'graphql', 'markdown', 'vue', 'svelte', 'yaml', 'html'] }
+    \ 'for': ['javascript', 'typescript', 'typescriptreact', 'css', 'less', 'scss', 'json', 'graphql', 'markdown', 'vue', 'svelte', 'yaml', 'html'] }
 
   " Files/navigation
   Plug 'nvim-lua/plenary.nvim'
