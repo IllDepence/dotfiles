@@ -7,11 +7,15 @@
     "editor.autoClosingOvertype": "never",
     "editor.autoClosingQuotes": "never",
     "editor.autoSurround": "never",
-    "[typescriptreact]": {
-        "editor.defaultFormatter": "esbenp.prettier-vscode"
-    },
     "editor.formatOnSave": true,
     "editor.formatOnPaste": true,
+    "vim.visualModeKeyBindings": [
+        {
+            "before": ["space"],
+            "commands": ["editor.action.commentLine"],
+            "when": "editorTextFocus && !editorReadonly"
+        },
+    ],
     "vim.normalModeKeyBindings": [
         {
             "before": ["g", "p", "d"],
@@ -75,5 +79,6 @@
             "commands": ["editor.action.marker.this"],
             "when": "editorFocus"
         }
-    ]
+    ],
+    "typescript.updateImportsOnFileMove.enabled": "always",
 }
